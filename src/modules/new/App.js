@@ -18,7 +18,6 @@ class App extends Component {
               return response.json()
             })
         .then(response => {
-          console.log(response)
           this.setState({
             data: response
           })
@@ -27,9 +26,7 @@ class App extends Component {
   render () {
     return (
       <div>
-        <h1>I suiyi,You happy is good!</h1>
-        <a href='about.html'>关于我们</a>
-        <a href='new.html'>发现</a>
+          我是发现页面
       </div>
     )
   }
