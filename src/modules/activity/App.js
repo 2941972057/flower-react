@@ -2,7 +2,8 @@
  * Created by dllo on 17/8/23.
  */
 import React, {Component} from 'react'
-import '../../assets/styles/App.styl'
+import '../../assets/styles/activity/Flower-activity.styl'
+import Start from '../../component/activity/Flower-activity'
 class App extends Component {
   constructor (props) {
     super(props)
@@ -11,7 +12,7 @@ class App extends Component {
     }
   }
   componentDidMount () {
-    fetch('/api/api/v1/users', {
+    fetch('/api/activities/?page=1', {
       method: 'GET'
     })
             .then(response => {
@@ -20,14 +21,14 @@ class App extends Component {
         .then(response => {
           console.log(response)
           this.setState({
-            data: response
+            data: response.activities
           })
         })
   }
   render () {
     return (
       <div>
-       我是美思页面
+        <Start />
       </div>
     )
   }

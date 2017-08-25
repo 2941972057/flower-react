@@ -2,7 +2,8 @@
  * Created by dllo on 17/8/23.
  */
 import React, {Component} from 'react'
-import '../../assets/styles/App.styl'
+import '../../assets/styles/new/Header.styl'
+import Nav from '../../component/nav/Nav'
 class App extends Component {
   constructor (props) {
     super(props)
@@ -27,10 +28,7 @@ class App extends Component {
   render () {
     return (
       <div>
-        <h1>I suiyi,You happy is good!</h1>
-        <a href='about.html'>关于我们</a>
-        <a href='new.html'>发现</a>
-        <a href='miss.html'>美思</a>
+        <Nav />
       </div>
     )
   }

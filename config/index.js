@@ -17,6 +17,13 @@ module.exports = {
         pathRewrite: {
           '/api': ''
         }
+      },
+      '/api': {
+        target: 'http://api.huaban.com',
+        changeOrigin: true,
+        pathRewrite: {
+          '/api': ''
+        }
       }
     }
   },
