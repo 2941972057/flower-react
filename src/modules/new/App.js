@@ -2,7 +2,7 @@
  * Created by dllo on 17/8/23.
  */
 import React, {Component} from 'react'
-import '../../assets/styles/App.styl'
+import Nav from '../../component/nav/Nav'
 class App extends Component {
   constructor (props) {
     super(props)
@@ -26,6 +26,7 @@ class App extends Component {
   render () {
     return (
       <div>
+        <Nav />
           我是发现页面
       </div>
     )

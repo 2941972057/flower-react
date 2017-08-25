@@ -27,10 +27,7 @@ class App extends Component {
   render () {
     return (
       <div>
-        <h1>I suiyi,You happy is good!</h1>
-        <a href='about.html'>关于我们</a>
-        <a href='new.html'>发现</a>
-        <a href='miss.html'>美思</a>
+       我是美思页面
       </div>
     )
   }
