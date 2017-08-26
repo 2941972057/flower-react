@@ -1,0 +1,48 @@
+.huaNav {
+  width: 560px;
+  height: 54px;
+  margin: 0 auto;
+  position: relative;
+}
+.huaNav p {
+  color: #fff;
+  font-size: 44px;
+  font-weight: lighter;
+}
+.huaNav input {
+  width: 580px;
+  height: 30px;
+  margin-left: -30px;
+  background-color: rgba(0,0,0,0.15);
+  border: 1px solid rgba(255,255,255,0.8);
+  outline: none;
+  font-size: 14px;
+  color: #808080;
+}
+.arrImg {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 522px;
+  top: 110px;
+}
+.soHot {
+  width: 540px;
+  height: 20px;
+  margin-top: 5px;
+  text-align: center;
+  color: #fff;
+}
+.soHot a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  margin: 0 3px;
+}
+.soHot span {
+  color: #ddd;
+  font-size: 14px;
+}
+.soHot a:hover {
+  text-decoration: underline;
+}

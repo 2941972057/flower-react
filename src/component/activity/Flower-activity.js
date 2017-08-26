@@ -3,7 +3,9 @@
  */
 import React, {Component} from 'react'
 import '../../assets/styles/activity/Flower-activity.styl'
-import Img from '../../assets/images/activity-img/logo.png'
+import Img from '../../assets/images/activity/logo.png'
+import '../../assets/styles/new/Header.styl'
+import Nav from '../../component/nav/Nav'
 class Start extends Component {
   constructor (props) {
     super(props)
@@ -58,6 +60,7 @@ class Start extends Component {
     })
     return (
       <div>
+        <Nav />
         <div className='a'>图</div>
         <div className='a1'>图2</div>
         <div className='w-header'>
