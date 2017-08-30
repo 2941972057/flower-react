@@ -3,8 +3,9 @@
  */
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Miss from './Miss'
+import DesignerServer from './DesignerServer'
+
 ReactDOM.render(
-  <Miss />,
+  <DesignerServer />,
     document.getElementById('app')
 )

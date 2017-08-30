@@ -11,11 +11,11 @@ module.exports = {
     port: 8080,
     autoOpenBrowser: true,
     proxyTable: {
-      '/api': {
+      '/muse': {
         target: 'https://muse.huaban.com',
         changeOrigin: true,
         pathRewrite: {
-          '/api': ''
+          '/muse': ''
         }
       },
       '/api': {
