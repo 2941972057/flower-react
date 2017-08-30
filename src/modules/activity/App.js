@@ -2,7 +2,7 @@
  * Created by dllo on 17/8/23.
  */
 import React, {Component} from 'react'
-import '../../assets/styles/activity/Flower-activity.styl'
+// 活动组件
 import Start from '../../component/activity/Flower-activity'
 class App extends Component {
   constructor (props) {
@@ -28,7 +28,7 @@ class App extends Component {
   render () {
     return (
       <div>
-        <Start />
+        <Start />,
       </div>
     )
   }
