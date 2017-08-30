@@ -1,32 +1,38 @@
 #new-waterFall
-  width 1496px
-  height 2000px
   margin auto
   position relative
 
-#new-waterFall .wf-list
+.wf-list
   width 236px
-  box-sizing border-box
-  position absolute
+  position relative
 
 #water-ad1
+  font-size 14px
   width 236px
   height 236px
-  border 1px solid black
+  position absolute
+  border 1px solid lightgray
   box-sizing border-box
   left 0
   top 0
-#water-ad2
-  width 236px
-  height 420px
-  left 252px
-  top 0
-#water-ad3
-  width 236px
-  height 420px
-  left 504px
-  top 0
-// 活动
+  opacity 0
+//#water-ad2
+//  font-size 14px
+//  position absolute
+//  width 236px
+//  height 420px
+//  left 252px
+//  top 0
+//  display none
+//#water-ad3
+//  font-size 14px
+//  position absolute
+//  width 236px
+//  height 420px
+//  left 504px
+//  top 0
+//  display none
+//活动
 .wf-activity
   position absolute
   right 0
@@ -39,26 +45,93 @@
   position absolute
   left 0
   top 0
-  width 100%
+  width 236px
   height 100%
+  padding 0
 .wf-list .cover:hover
   background-color rgba(2,3,3,0)
 
 // 瀑布流
 .water-list
   position absolute
-  top 0
-  left 756px
-
+  background-color white
+  box-shadow 0 1px 3px rgba(0,0,0,.3)
+  opacity 0
+.water-list:hover .collection,.water-list:hover .thumbs
+  display block
 .wf-list
   position relative
-
+  width 236px
+  font-size 0
 .wf-list img
   width 236px
-  border 1px solid red
-
-.collection
-  border 1px solid red
-
-.thumbs
-  border 1px solid black
+.wf-list .collection
+  font-size 14px
+  position absolute
+  background-color #E53E49
+  color #fff
+  text-shadow 0 -1px 0 rgba(0,0,0,.1)
+  border-radius 2px
+  padding 5px 12px
+  top 10px
+  left 10px
+  display none
+  border  1px solid rgba(127,0,3,.7)
+.wf-list .thumbs
+  position absolute
+  font-size 14px
+  top 10px
+  right 10px
+  border-radius 2px
+  background-color #fff
+  padding 5px 12px
+  display none
+  border 1px solid rgba(0,0,0,.2)
+.collection:hover
+  background-color linear-gradient( #F45D68, #E54646)
+  border 1px solid #C90000
+.thumbs:hover
+  background-color linear-gradient(#FFF, #F7F7F7)
+  border 1px solid #CCC
+.water-text
+  width 236px
+.water-title
+  width 236px
+  padding 0 16px
+  max-height 51px
+  overflow hidden
+  font-size 12px
+  word-break break-all
+  word-wrap break-word
+  margin 10px 0
+  box-sizing border-box
+.water-desc
+  width 236px
+  height 66px
+  padding  0 15px
+  box-sizing border-box
+  overflow hidden
+  border-top 1px solid #F2F2F2
+  background-color #FAFAFA
+.water-author-image>img
+  position relative
+  top 16px
+  width 34px
+  height 34px
+.water-author-image
+  width 34px
+.author-box
+  width 162px
+  height 51px
+  font-size 12px
+  padding 15px 0 0 10px
+.author-box a
+  color #9E7E6B
+.author-box a:hover
+  text-decoration underline
+.water-author-image,.author-box
+  height 66px
+  box-sizing border-box
+  float left
+.author1,.author2
+  margin 0 2px

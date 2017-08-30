@@ -20,25 +20,6 @@ import CategoryImg from '../../component/new/Category_img'
 // 内容区瀑布流组件
 import WaterFall from '../../component/new/WaterFall'
 class App extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      data: []
-    }
-  }
-  componentDidMount () {
-    fetch('/api/api/v1/users', {
-      method: 'GET'
-    })
-            .then(response => {
-              return response.json()
-            })
-        .then(response => {
-          this.setState({
-            data: response
-          })
-        })
-  }
   render () {
     return (
       <div>

@@ -6,23 +6,20 @@ import '../../assets/styles/activity/Flower-activity.styl'
 import Img from '../../assets/images/activity/logo.png'
 import '../../assets/styles/new/Header.styl'
 import Nav from '../../component/nav/Nav'
+// 登录组件
+import Login from '../../component/activity/LoginList'
+import ShowLogin from '../../component/activity/ShowLogin'
 class Start extends Component {
   constructor (props) {
     super(props)
     this.state = {
       data: [],
-      a: '1'
+      a: '1',
+      b: 'www'
     }
   }
-  click = () => {
-    this.setState({
-      date: [],
-      a: '2'
-    })
-    console.log(this.state.a)
-  }
   componentDidMount () {
-    fetch('/api/activities/?page=' + this.state.a, {
+    fetch('/api/activities/?page=1', {
       method: 'GET'
     })
             .then(response => {
@@ -34,7 +31,51 @@ class Start extends Component {
               })
             })
   }
+  click = () => {
+    fetch('/api/activities/?page=1', {
+      method: 'GET'
+    })
+            .then(response => {
+              return response.json()
+            })
+            .then(response => {
+              this.setState({
+                data: response.activities,
+                b: 'www'
+              })
+            })
+  }
+  click1 = () => {
+    // this.setState({
+    //   a: '2'
+    // })
+    fetch('/api/activities/?page=2', {
+      method: 'GET'
+    })
+            .then(response => {
+              return response.json()
+            })
+            .then(response => {
+              this.setState({
+                data: response.activities,
+                b: 'ccc'
+              })
+            })
+  }
   render () {
+    let d = document.getElementsByClassName('w-switch-a')
+    for (var i = 0; i < d.length; i++) {
+      d[i].style.backgroundColor = '#F2F2F2'
+      d[i].style.color = 'black'
+      if (this.state.b === 'www') {
+        d[0].style.backgroundColor = 'black'
+        d[0].style.color = '#F2F2F2'
+      }
+      if (this.state.b === 'ccc') {
+        d[1].style.backgroundColor = 'black'
+        d[1].style.color = '#F2F2F2'
+      }
+    }
     //  图片
     const obj = this.state.data
     const imgUrl = []
@@ -60,9 +101,9 @@ class Start extends Component {
     })
     return (
       <div>
+        <ShowLogin />
         <Nav />
-        <div className='a'>图</div>
-        <div className='a1'>图2</div>
+        <Login />
         <div className='w-header'>
           <div className='w-header-logo'>
             <img src={Img} />
@@ -71,21 +112,21 @@ class Start extends Component {
         <div className='box'>
           <ul>{dataArr}</ul>
         </div>
+        {/* 分页 */}
         <div className='w-switch'>
-          <a className='w-switch-a'>1</a>
-          <a href="/api/activities/?page=2" className='w-switch-a' onClick={this.click}>2</a>
+          <a className='w-switch-a' onClick={this.click} >1</a>
+          <a className='w-switch-a' onClick={this.click1} >2</a>
           <a className='w-switch-a' href=''>»</a>
         </div>
+        {/* 底部部分 */}
         <div className='w-foot'>
           <div className='w-foot-div'>
             <div className='w-left-a'>
               <a href='https://huaban.com/'>花瓣网</a>
-              <div className='shu'>
-                <a href='https://huaban.com/activities/'>花瓣活动</a>
-              </div>
-              <div className='shu'>
-                <a href='https://huaban.com/cc/business/'>商务合作</a>
-              </div>
+              <div className='shu' />
+              <a href='https://huaban.com/activities/'>花瓣活动</a>
+              <div className='shu' />
+              <a href='https://huaban.com/cc/business/'>商务合作</a>
             </div>
             <div className='w-right-a'>
               <a href='https://huaban.com/apps/'>下载花瓣移动客户端</a>
