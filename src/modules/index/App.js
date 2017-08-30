@@ -10,27 +10,34 @@ import AdvertGt from '../../component/index/advert'
 import '../../assets/styles/index/advert.styl'
 import BodyGt from '../../component/index/BodyGt'
 import '../../assets/styles/index/BodyGt.styl'
+import LoodIng from '../../component/index/looding'
+import Allzj from '../../component/bodyDiv-zj/Allzj'
+import '../../assets/styles/index/Looding.styl'
+import '../../assets/styles/index/App.styl'
+
 class App extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      data: []
+      data: [],
+      page: 1
     }
   }
+
   componentDidMount () {
-    fetch('/api/?page=1', {
+    fetch('/api/?page=' + this.state.page, {
       method: 'GET'
     })
-            .then(response => {
-              return response.json()
-            })
-            .then(response => {
-              console.log(response)
-              this.setState({
-                data: response
-              })
-            })
+        .then(response => {
+          return response.json()
+        })
+        .then(response => {
+          this.setState({
+            data: response
+          })
+        })
   }
+
   render () {
     const object = this.state.data.banners
     const imgUrl = []
@@ -46,12 +53,14 @@ class App extends Component {
     return (
 
       <div className='wrap'>
-        <Nav />
         <div id='myDiv'style={divStyle} >
+          <Nav />
           <NavGt />
         </div>
         <AdvertGt />
         <BodyGt />
+        <Allzj />
+        <LoodIng />
       </div>
 
     )
