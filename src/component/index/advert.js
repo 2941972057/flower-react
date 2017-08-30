@@ -29,11 +29,14 @@ class AdvertGt extends Component {
   }
 
   render () {
+    var nameArr = []
     const object = this.state.data.explores
     const imgArr1 = []
     for (const key in object) {
       const b = 'http://' + object[key].cover.bucket + '.b0.upaiyun.com/' + object[key].cover.key
       imgArr1.push(b)
+      var names = object[key].name
+      nameArr.push(names)
     }
 
     return (
@@ -48,11 +51,11 @@ class AdvertGt extends Component {
           <div><a><img src={imgArr1[3]} /></a></div>
           <div><a><img src={imgArr1[4]} /></a></div>
           <div>
-            <a href='#' className='ab1'>蛋糕</a>
+            <a href='#' className='ab1'>{nameArr[5]}</a>
             <a href='#'><img className='img1' src={imgArr1[5]} /></a>
           </div>
           <div>
-            <a href='#' className='ab2'>PINK</a>
+            <a href='#' className='ab2'>{nameArr[6]}</a>
             <a href='#'><img className='img1' src={imgArr1[6]} /></a>
           </div>
         </div>
