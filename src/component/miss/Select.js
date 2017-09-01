@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import '../../assets/styles/miss/Miss.styl'
+import '../../assets/styles/miss/Select.styl'
 import Pana from '../../assets/images/miss/1.png'
 import HTC from '../../assets/images/miss/2.png'
 import Mengnv from '../../assets/images/miss/3.png'
@@ -23,8 +23,8 @@ class Select extends Component {
   render () {
     return (
       <div className='wxj_Select'>
-        <div className='wxj_Logos_text_another'>他们选择了美思</div>
-        <div className='wxj_Logos_line'>__________</div>
+        <div className='wxj_Logos_text_another'>.</div>
+        <div className='wxj_Logos_line'>.</div>
         <div className='wxj_Select_contain'>
           <a href=''><img src={Pana} className='wxj_1' /></a>
           <a href=''><img src={HTC} className='wxj_2' /></a>

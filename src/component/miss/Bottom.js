@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import '../../assets/styles/miss/Miss.styl'
+import '../../assets/styles/miss/Bottom.styl'
 
 class Bottom extends Component {
   render () {

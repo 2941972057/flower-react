@@ -5,10 +5,11 @@ import React, {Component} from 'react'
 import '../../assets/styles/activity/Flower-activity.styl'
 import Img from '../../assets/images/activity/logo.png'
 import '../../assets/styles/new/Header.styl'
-import Nav from '../../component/nav/Nav'
+// 导航
+import Nav from '../../component/common/headerNav/HeaderNav'
 // 登录组件
-import Login from '../../component/activity/LoginList'
-import ShowLogin from '../../component/activity/ShowLogin'
+import Login from '../../component/common/headerLoginList/HeaderLoginList'
+import ShowLogin from '../../component/common/headerLoginList/HeaderLoginShow'
 class Start extends Component {
   constructor (props) {
     super(props)
@@ -101,9 +102,9 @@ class Start extends Component {
     })
     return (
       <div>
-        <ShowLogin />
         <Nav />
         <Login />
+        <ShowLogin />
         <div className='w-header'>
           <div className='w-header-logo'>
             <img src={Img} />

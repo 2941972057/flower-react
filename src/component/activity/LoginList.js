@@ -9,7 +9,7 @@ class Login extends Component {
   render () {
     return (
       <div>
-        <div className="aa" />
+        <div className='aa' />
         <div className='a1'>
           <div className='w-bao'>
             <div className='w-left-div'>

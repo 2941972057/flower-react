@@ -2,7 +2,7 @@
  * Created by dllo on 17/8/28.
  */
 import React, {Component} from 'react'
-import '../../assets/styles/miss/Miss.styl'
+import '../../assets/styles/miss/Need.styl'
 
 class Need extends Component {
   render () {
@@ -12,16 +12,16 @@ class Need extends Component {
     var arr1 = []
     for (let i = 0; i < arr.length; i++) {
       arr1.push(
-        <div className='wxj_Need_text'>
+        <a href='' className='wxj_Need_text'>
           <p className='wxj_Need_p'>{arr[i]}</p>
-        </div>
+        </a>
           )
     }
 
     return (
       <div className='wxj_Need'>
-        <div className='wxj_Logos_text_another'>马上找到您需要的设计师</div>
-        <div className='wxj_Logos_line'>__________</div>
+        <div className='wxj_Logos_text_another1'>.</div>
+        <div className='wxj_Logos_line'>.</div>
         <div className='wxj_Need_contain'>
           {arr1}
         </div>

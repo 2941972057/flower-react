@@ -2,8 +2,8 @@
  * Created by dllo on 17/8/23.
  */
 import React, {Component} from 'react'
-import '../../assets/styles/new/Header.styl'
-import Nav from '../../component/nav/Nav'
+import Nav from '../../component/common/headerNav/HeaderNav'
+import '../../assets/styles/common/headerNav/headerNav.styl'
 import NavGt from '../../component/index/flowernavgt'
 import '../../assets/styles/index/Navgt.styl'
 import AdvertGt from '../../component/index/advert'
@@ -51,10 +51,9 @@ class App extends Component {
     }
 
     return (
-
       <div className='wrap'>
+        <Nav />
         <div id='myDiv'style={divStyle} >
-          <Nav />
           <NavGt />
         </div>
         <AdvertGt />

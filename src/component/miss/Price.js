@@ -2,17 +2,16 @@
  * Created by dllo on 17/8/26.
  */
 import React, {Component} from 'react'
-import '../../assets/styles/miss/Miss.styl'
+import '../../assets/styles/miss/Price.styl'
 
 class Price extends Component {
   render () {
     return (
       <div>
         <div className='wxj_Logos_price'>
-          <div className='wxj_Logos_text_another'>
-            <p className='wxj_Logos_gang1'>.</p>
-            <p className='wxj_Logos_gang2'>.</p>
-            <p className='wxj_Logos_price_p'>联合设计中心</p>
+          <div className='wxj_Logos_price_p'>
+            <span className='wxj_Logos_gang1'>_____________</span>
+            <span className='wxj_Logos_gang2'>_____________</span>
           </div>
           <div className='wxj_Logos_price_contain'>
             <div className='wxj_Logos_price_pic'>
@@ -36,8 +35,8 @@ class Price extends Component {
               <p className='wxj_Logos_price_p3'>______</p>
               <p className='wxj_Logos_price_p4'>领域：动漫/影视</p>
             </div>
+            <div className='wxj_Logos_price_next'>即将推出如需预约,请联系经纪人</div>
           </div>
-          <div className='wxj_Logos_price_next'>即将推出如需预约,请联系经纪人</div>
         </div>
       </div>
     )

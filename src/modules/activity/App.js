@@ -5,30 +5,21 @@ import React, {Component} from 'react'
 // 活动组件
 import Start from '../../component/activity/Flower-activity'
 class App extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      data: []
+  componentDidMount () {
+    document.onscroll = function () {
+      var theTop = document.body.scrollTop
+      if (theTop >= 70) {
+        document.getElementById('yin').style.display = 'block'
+      } else {
+        document.getElementById('yin').style.display = 'none'
+      }
     }
   }
-  componentDidMount () {
-    fetch('/api/activities/?page=1', {
-      method: 'GET'
-    })
-            .then(response => {
-              return response.json()
-            })
-        .then(response => {
-          console.log(response)
-          this.setState({
-            data: response.activities
-          })
-        })
-  }
+
   render () {
     return (
       <div>
-        <Start />,
+        <Start />
       </div>
     )
   }

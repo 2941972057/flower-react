@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import '../../assets/styles/miss/Miss.styl'
+import '../../assets/styles/miss/Navhover.styl'
 import Logo from '../../assets/images/miss/0477e743072134634690da795644cd26.svg'
+import Navhover from './Navhover'
 
 class Top extends Component {
   render () {
@@ -8,9 +10,13 @@ class Top extends Component {
       <div className='wxj_Top'>
         <div className='wxj_Top_nav'>
           <ul className='wxj_Top_ul'>
-            <li className='wxj_Top_l1'><a href=''><img src={Logo} /></a></li>
-            <li className='wxj_Top_l2'><a href=''>首页</a></li>
-            <li className='wxj_Top_l3'><a href=''>设计服务</a></li>
+            <li className='wxj_Top_l1'><a href='miss.html'><img src={Logo} /></a></li>
+            <li className='wxj_Top_l2'>
+              <a href='miss.html' style={{position: 'relative'}}>首页
+               <div className='wxj_Top_square' />
+              </a>
+            </li>
+            <li className='wxj_Top_l3'><a href='designerServer.html'>设计服务</a><Navhover /></li>
             <li className='wxj_Top_l4'><a href=''>设计师</a></li>
           </ul>
           <div className='wxj_Top_nav_right'>

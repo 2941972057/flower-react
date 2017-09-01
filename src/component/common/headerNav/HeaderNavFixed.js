@@ -1,14 +1,14 @@
 /**
- * Created by dllo on 17/8/24.
+ * Created by dllo on 17/8/30.
  */
 import React, {Component} from 'react'
-import Page from '../../component/more/PagePilot'
-class Nav extends Component {
+import Page from '../../../component/more/PagePilot'
+import '../../../assets/styles/common/headerNav/headerNavFixed.styl'
+class HeaderNavFixed extends Component {
   render () {
     return (
       <div id='header-nav'>
         <div id='nav'>
-          {/* <div className="aa" /> */}
           <div id='nav-left'>
             <a href='index.html' className='nav-list'>
               <img src='http://huaban.com/img/logo.svg' alt='' className='nav-logo' />
@@ -18,8 +18,8 @@ class Nav extends Component {
             <a href='miss.html' className='nav-list'>美思</a>
             <a href='activity.html' className='nav-list'>活动<i><img src='http://huaban.com/img/muse/em-new.svg' alt='' className='nav-new' /></i></a>
             <a href='https://meia.me/' className='nav-list'>教育</a>
-            <span className="nav-span">···
-              <Page />
+            <span className='nav-span'>···
+               <Page />
             </span>
           </div>
           <div id='nav-right'>
@@ -31,4 +31,4 @@ class Nav extends Component {
     )
   }
 }
-export default Nav
+export default HeaderNavFixed

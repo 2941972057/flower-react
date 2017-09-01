@@ -19,7 +19,9 @@
   border none
   margin 0
   padding 0
-
+.guide_list
+  color #444
+  text-decoration none
 #new-category-guide .unit .guide_list
   margin-right 24px
   line-height 24px
@@ -31,25 +33,15 @@
   text-decoration underline
   color #9A0000
 
-// 内容区风格样式
-#new-category-img
-  width 1496px
-  height 126px
-  margin 20px auto
 @media screen and (max-width: 1288px)
   #new-category-guide .unit
     width 167px
     margin-right 17px
   #new-category-guide .unit:last-child
     margin 0
-  #new-category-img,#new-category-guide
+  #new-category-guide
     width 992px
     box-sizing border-box
-  #new-category-img .category-image:nth-child(5),
-  #new-category-img .category-image:nth-child(6)
-    display none
-  #new-category-img .category-image:nth-child(4)
-    margin 0
 
 @media screen and (max-width: 1542px) and (min-width: 1289px)
   #new-category-guide .unit
@@ -57,22 +49,6 @@
     margin-right 20px
   #new-category-guide .unit:last-child
     margin 0
-  #new-category-img,#new-category-guide
+  #new-category-guide
     width 1244px
     box-sizing border-box
-  #new-category-img .category-image:nth-child(6)
-    display none
-  #new-category-img .category-image:nth-child(5)
-    margin 0
-
-.category-image
-  display inline-block
-  width 236px
-  height 126px
-  margin-right 16px
-
-#new-category-img .category-image:last-child
-  margin 0
-
-.category-image>img
-  border-radius 4px

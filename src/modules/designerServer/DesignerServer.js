@@ -1,9 +1,7 @@
 import React, {Component} from 'react'
 import Bottom from '../../component/miss/Bottom'
-import Nav from '../../component/designerServer/Nav'
 import ServerTop from '../../component/designerServer/ServerTop'
-import Content from '../../component/designerServer/concent'
-import '../../assets/styles/miss/Miss.styl'
+import Content from '../../component/designerServer/Concent'
 
 class DesignerServer extends Component {
   constructor (props) {
@@ -14,9 +12,8 @@ class DesignerServer extends Component {
   }
   render () {
     return (
-      <div className='wxj_background'>
+      <div>
         <ServerTop />
-        <Nav />
         <Content />
         <Bottom />
       </div>

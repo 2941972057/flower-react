@@ -8,7 +8,7 @@ import Img3 from '../../assets/images/new/3.jpg'
 import Img4 from '../../assets/images/new/4.jpg'
 import Img5 from '../../assets/images/new/5.jpg'
 import Img6 from '../../assets/images/new/6.jpg'
-
+import '../../assets/styles/new/category_img.styl'
 class CategoryImg extends Component {
   render () {
     return (

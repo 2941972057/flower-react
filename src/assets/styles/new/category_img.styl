@@ -1,0 +1,37 @@
+// 内容区风格样式
+#new-category-img
+  width 1496px
+  height 126px
+  margin 20px auto
+
+.category-image
+  display inline-block
+  width 236px
+  height 126px
+  margin-right 16px
+
+#new-category-img .category-image:last-child
+  margin 0
+
+.category-image>img
+  border-radius 4px
+
+@media screen and (max-width: 1288px)
+  #new-category-img
+    width 992px
+    box-sizing border-box
+  #new-category-img .category-image:nth-child(5),
+  #new-category-img .category-image:nth-child(6)
+    display none
+  #new-category-img .category-image:nth-child(4)
+    margin 0
+
+@media screen and (max-width: 1542px) and (min-width: 1289px)
+  #new-category-img
+    width 1244px
+    box-sizing border-box
+  #new-category-img .category-image:nth-child(6)
+    display none
+  #new-category-img .category-image:nth-child(5)
+    margin 0
+

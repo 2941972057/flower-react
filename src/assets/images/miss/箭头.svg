@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="86px" height="144px" viewBox="0 0 86 144" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>em-home-page-ctrl</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="newHome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Muse3.0-新首页" transform="translate(-1629.000000, -4107.000000)">
+            <g id="Group-23" transform="translate(1629.000000, 4107.000000)">
+                <path d="M33.1126984,2 L32.1126984,1 L1,32.1126984 L32.1126984,63.2253967 L33.1126984,62.2253967 L3,32.1126984 L33.1126984,2 Z" id="Combined-Shape-Copy-3" fill="#000000"></path>
+                <path d="M33.1126984,82 L32.1126984,81 L1,112.112698 L32.1126984,143.225397 L33.1126984,142.225397 L3,112.112698 L33.1126984,82 Z" id="Combined-Shape-Copy-5" fill="#CA9E21"></path>
+                <path d="M85.1126984,2 L84.1126984,1 L53,32.1126984 L84.1126984,63.2253967 L85.1126984,62.2253967 L55,32.1126984 L85.1126984,2 Z" id="Combined-Shape-Copy-2" fill="#000000" transform="translate(69.056349, 32.112698) scale(-1, 1) translate(-69.056349, -32.112698) "></path>
+                <path d="M85.1126984,82 L84.1126984,81 L53,112.112698 L84.1126984,143.225397 L85.1126984,142.225397 L55,112.112698 L85.1126984,82 Z" id="Combined-Shape-Copy-6" fill="#CA9E21" transform="translate(69.056349, 112.112698) scale(-1, 1) translate(-69.056349, -112.112698) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
