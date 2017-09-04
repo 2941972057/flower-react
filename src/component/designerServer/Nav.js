@@ -26,9 +26,9 @@ class Nav extends Component {
 
   render () {
     return (
-      <div style={{backgroundColor : '#ddd'}}>
-      <div className='wxj_nav_all'>
-        <ul className='wxj_nav'>
+      <div style={{backgroundColor : 'grey'}}>
+      <div className='wxj_nav_all_HOVER'>
+        <ul className='wxj_nav_HOVER'>
           <a style={{width: '46px', height: '19px'}}><li>分类:</li></a>
           <a style={{width: '28px', height: '19px'}}><li>全部</li></a>
           <a style={{width: '76px', height: '19px'}}><li onClick={this.clickLogo} className='kang'>LOGO/品牌</li></a>

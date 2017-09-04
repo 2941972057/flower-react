@@ -60,6 +60,10 @@ class Content extends Component {
       navChild.appendChild(aBiaoQian)
       var liBiaoQian = document.createElement('li')
       liBiaoQian.innerHTML = logoArr[i]
+      liBiaoQian.onclick = function() {
+        var urlArr = ['api/v1/services/?category=logo_brand&sub_category=logo_design', 'api/v1/services/?category=logo_brand&sub_category=vi_system_brand', 'api/v1/services/?category=logo_brand&sub_category=business_card_brand', 'api/v1/services/?category=logo_brand&sub_category=space_brand', 'api/v1/services/?category=logo_brand&sub_category=business_gift_brand', 'api/v1/services/?category=logo_brand&sub_category=brand_others']
+        this.ajax(urlArr[i])
+      }.bind(this)
       aBiaoQian.appendChild(liBiaoQian)
     }
     fetch('/muse/api/v1/services/?category=logo_brand', {
@@ -82,6 +86,10 @@ class Content extends Component {
       navChild.appendChild(aBiaoQian)
       var liBiaoQian = document.createElement('li')
       liBiaoQian.innerHTML = planeArr[i]
+      liBiaoQian.onclick = function() {
+        var urlArr = ['api/v1/services/?category=graphic_design&sub_category=postcard_graphic', 'api/v1/services/?category=graphic_design&sub_category=poster_graphic', 'api/v1/services/?category=graphic_design&sub_category=brochure_page_graphic', 'api/v1/services/?category=graphic_design&sub_category=package_graphic', 'api/v1/services/?category=graphic_design&sub_category=cover_graphic', 'api/v1/services/?category=graphic_design&sub_category=graphic_others']
+        this.ajax(urlArr[i])
+      }.bind(this)
       aBiaoQian.appendChild(liBiaoQian)
     }
     fetch('/muse/api/v1/services/?category=graphic_design', {
@@ -104,6 +112,10 @@ class Content extends Component {
       navChild.appendChild(aBiaoQian)
       var liBiaoQian = document.createElement('li')
       liBiaoQian.innerHTML = UIArr[i]
+      liBiaoQian.onclick = function() {
+        var urlArr = ['api/v1/services/?category=logo_brand&sub_category=logo_design', 'api/v1/services/?category=logo_brand&sub_category=vi_system_brand', 'api/v1/services/?category=logo_brand&sub_category=space_brand', 'api/v1/services/?category=logo_brand&sub_category=business_gift_brand', 'api/v1/services/?category=logo_brand&sub_category=brand_others']
+        this.ajax(urlArr[i])
+      }.bind(this)
       aBiaoQian.appendChild(liBiaoQian)
     }
     fetch('/muse/api/v1/services/?category=web_app_ui', {
@@ -126,6 +138,10 @@ class Content extends Component {
       navChild.appendChild(aBiaoQian)
       var liBiaoQian = document.createElement('li')
       liBiaoQian.innerHTML = huaArr[i]
+      liBiaoQian.onclick = function() {
+        var urlArr = ['api/v1/services/?category=paint_illustration&sub_category=illustration', 'api/v1/services/?category=paint_illustration&sub_category=origin_paint', 'api/v1/services/?category=paint_illustration&sub_category=cartoon_paint', 'api/v1/services/?category=paint_illustration&sub_category=mascot', 'api/v1/services/?category=paint_illustration&sub_category=paint_others']
+        this.ajax(urlArr[i])
+      }.bind(this)
       aBiaoQian.appendChild(liBiaoQian)
     }
     fetch('/muse/api/v1/services/?category=industry_product', {
@@ -148,9 +164,13 @@ class Content extends Component {
       navChild.appendChild(aBiaoQian)
       var liBiaoQian = document.createElement('li')
       liBiaoQian.innerHTML = filmArr[i]
+      liBiaoQian.onclick = function() {
+        var urlArr = ['api/v1/services/?category=paint_illustration&sub_category=illustration', 'api/v1/services/?category=paint_illustration&sub_category=origin_paint', 'api/v1/services/?category=paint_illustration&sub_category=cartoon_paint', 'api/v1/services/?category=paint_illustration&sub_category=mascot', 'api/v1/services/?category=paint_illustration&sub_category=paint_others']
+        this.ajax(urlArr[i])
+      }.bind(this)
       aBiaoQian.appendChild(liBiaoQian)
     }
-    fetch('/muse//api/v1/services/?category=video_animation', {
+    fetch('/muse/api/v1/services/?category=video_animation', {
       method: 'GET'
     })
       .then(response => {
@@ -170,9 +190,26 @@ class Content extends Component {
       navChild.appendChild(aBiaoQian)
       var liBiaoQian = document.createElement('li')
       liBiaoQian.innerHTML = photoArr[i]
+      liBiaoQian.onclick = function() {
+        var urlArr = ['api/v1/services/?category=paint_illustration&sub_category=illustration', 'api/v1/services/?category=paint_illustration&sub_category=origin_paint', 'api/v1/services/?category=paint_illustration&sub_category=cartoon_paint', 'api/v1/services/?category=paint_illustration&sub_category=mascot', 'api/v1/services/?category=paint_illustration&sub_category=paint_others']
+        this.ajax(urlArr[i])
+      }.bind(this)
       aBiaoQian.appendChild(liBiaoQian)
     }
     fetch('/muse/api/v1/services/?category=graphic_design', {
+      method: 'GET'
+    })
+      .then(response => {
+        return response.json()
+      })
+      .then(response => {
+        this.setState({
+          data: response
+        })
+      })
+  }
+  ajax = (url) => {
+    fetch('/muse/' + url, {
       method: 'GET'
     })
       .then(response => {
@@ -192,6 +229,10 @@ class Content extends Component {
       navChild.appendChild(aBiaoQian)
       var liBiaoQian = document.createElement('li')
       liBiaoQian.innerHTML = clothArr[i]
+      liBiaoQian.onclick = function() {
+        var urlArr = ['api/v1/services/?category=costume_design&sub_category=custom-tailor', 'api/v1/services/?category=costume_design&sub_category=tshirt_costume', 'api/v1/services/?category=costume_design&sub_category=case_bag', 'api/v1/services/?category=costume_design&sub_category=costume_others']
+        this.ajax(urlArr[i])
+      }.bind(this)
       aBiaoQian.appendChild(liBiaoQian)
     }
     fetch('/muse/api/v1/services/?category=costume_design', {
@@ -214,6 +255,10 @@ class Content extends Component {
       navChild.appendChild(aBiaoQian)
       var liBiaoQian = document.createElement('li')
       liBiaoQian.innerHTML = indoorArr[i]
+      liBiaoQian.onclick = function() {
+        var urlArr = ['api/v1/services/?category=interior_home_design&sub_category=interior_design', 'api/v1/services/?category=interior_home_design&sub_category=home_design', 'api/v1/services/?category=interior_home_design&sub_category=office_design', 'api/v1/services/?category=interior_home_design&sub_category=interior_others']
+        this.ajax(urlArr[i])
+      }.bind(this)
       aBiaoQian.appendChild(liBiaoQian)
     }
     fetch('/muse/api/v1/services/?category=interior_home_design', {
@@ -236,6 +281,10 @@ class Content extends Component {
       navChild.appendChild(aBiaoQian)
       var liBiaoQian = document.createElement('li')
       liBiaoQian.innerHTML = moduleArr[i]
+      liBiaoQian.onclick = function() {
+        var urlArr = ['api/v1/services/?category=paint_illustration&sub_category=illustration', 'api/v1/services/?category=paint_illustration&sub_category=origin_paint', 'api/v1/services/?category=paint_illustration&sub_category=cartoon_paint', 'api/v1/services/?category=paint_illustration&sub_category=mascot', 'api/v1/services/?category=paint_illustration&sub_category=paint_others']
+        this.ajax(urlArr[i])
+      }.bind(this)
       aBiaoQian.appendChild(liBiaoQian)
     }
     fetch('/muse/api/v1/services/?category=graphic_design', {
@@ -258,6 +307,10 @@ class Content extends Component {
       navChild.appendChild(aBiaoQian)
       var liBiaoQian = document.createElement('li')
       liBiaoQian.innerHTML = primateArr[i]
+      liBiaoQian.onclick = function() {
+        var urlArr = ['api/v1/services/?category=custom_design&sub_category=chinese_beautiful_things', 'api/v1/services/?category=custom_design&sub_category=anime_related_products', 'api/v1/services/?category=custom_design&sub_category=star_related_products']
+        this.ajax(urlArr[i])
+      }.bind(this)
       aBiaoQian.appendChild(liBiaoQian)
     }
     fetch('/muse/api/v1/services/?category=custom_design', {
@@ -280,6 +333,10 @@ class Content extends Component {
       navChild.appendChild(aBiaoQian)
       var liBiaoQian = document.createElement('li')
       liBiaoQian.innerHTML = otherArr[i]
+      liBiaoQian.onclick = function() {
+        var urlArr = ['api/v1/services/?category=others&sub_category=sub_others']
+        this.ajax(urlArr[i])
+      }.bind(this)
       aBiaoQian.appendChild(liBiaoQian)
     }
     fetch('/muse/api/v1/services/?category=others', {

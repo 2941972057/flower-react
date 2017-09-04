@@ -9,7 +9,7 @@ class Designer extends Component {
     return (
       <div className='wxj_designer'>
         <div className='wxj_Logos_text'>有品质的设计,来自专业的设计师</div>
-        <div className='wxj_Logos_line'>.</div>
+        <div className='wxj_Logos_line' />
         <div className='wxj_designer_contain'>
           <div className='wxj_designer_contain_border'>
             <div className='wxj_designer_contain_border_left' >
@@ -31,7 +31,7 @@ class Designer extends Component {
             <div className='wxj_designer_contain_border_left1' >
               <img src='https://muse.huaban.com/assets/698ef25e53d2954d394a34d61ca93be9.jpg' />
             </div>
-            <div className='wxj_designer_shadow1'>.</div>
+            <div className='wxj_designer_shadow1' />
             <div className='wxj_designer_contain_border_right1'>
               <div className='wxj_designer_contain_header1'>
                 <label className='wxj_designer_label3'>ID</label>
@@ -47,7 +47,7 @@ class Designer extends Component {
             <div className='wxj_designer_contain_border_left' >
               <img src='https://muse.huaban.com/assets/95436bb1f3da319bac90a007f7faa24a.jpg' />
             </div>
-            <div className='wxj_designer_shadow'>.</div>
+            <div className='wxj_designer_shadow' />
             <div className='wxj_designer_contain_border_right'>
               <div className='wxj_designer_contain_header'>
                 <label className='wxj_designer_label5'>ID</label>
