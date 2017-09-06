@@ -6,13 +6,13 @@
  */
 import '../../assets/styles/waterFall/WaterFall.styl'
 // 头部导航组件
-import HeaderNav from '../../component/common/headerNav/HeaderNav'
+// import HeaderNav from '../../component/common/headerNav/HeaderNav'
 // 头部广告组件
-import HeaderAd from '../../component/common/headerAd/HeaderAd'
+// import HeaderAd from '../../component/common/headerAd/HeaderAd'
 // 头部大图片组件
-import SearchImg from '../../assets/images/index/搜索.png'
+// import SearchImg from '../../assets/images/index/搜索.png'
 import React, {Component} from 'react'
-class SearchWater extends Component {
+class SearchGT3 extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -91,31 +91,12 @@ class SearchWater extends Component {
   }
   render () {
     return (
-      <div>
-        <div id='searchPage'>
-          <HeaderNav />
-          <HeaderAd />
-          <div id='searchBig' >
-            <input type='text' placeholder='搜索你喜欢的内容' className='searchtext' onChange={this.change} />
-            <a href={'search.html?q=' + this.state.value}><img className='pgo' src={SearchImg} /></a>
-            <div className='searchBox'>
-              <a href='#'><span className='span-a'>34757采集</span></a>
-              <a href='#'><span className='span-a'>7331画板</span></a>
-              <a href='#'><span className='span-a'>5404用户</span></a>
-              <a className='href-a'>排序:</a>
-              <a className='href-a' onClick={this.clickc}>综合</a>
-              <a className='href-a' onClick={this.click}>热门</a>
-              <a className='href-a' onClick={this.click1}>匹配度</a>
-              <a className='href-a' onClick={this.click2}>时间</a>
-            </div>
-          </div>
-        </div>
-        <div id='new-waterFall'>
-          <div id='water-ad1'>
+      <div id='new-waterFall'>
+        <div id='water-ad1'>
             广告
           </div>
-          <div>
-            {
+        <div>
+          {
               this.state.arrList.map((item, index) =>
                 <div className='water-list' key={index}>
                   <div className='wf-list' style={{height: 236 * item.bHeight / item.bWidth}}>
@@ -146,10 +127,9 @@ class SearchWater extends Component {
                 </div>
               )
             }
-          </div>
         </div>
       </div>
     )
   }
 }
-export default SearchWater
+export default SearchGT3

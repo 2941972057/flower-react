@@ -1,7 +1,13 @@
 import '../../assets/styles/new/Header.styl'
 import SearchWater from '../../component/index/SearchWater'
-import SearchWater3 from '../../component/index/SearchGT3'
+import SearchGT3 from '../../component/index/SearchGT3'
 import '../../assets/styles/index/BodyGt.styl'
+import SearchImg from '../../assets/images/index/搜索.png'
+// 头部导航组件
+import HeaderNav from '../../component/common/headerNav/HeaderNav'
+// 头部广告组件
+import HeaderAd from '../../component/common/headerAd/HeaderAd'
+// 头部大图片组件
 import React, {Component} from 'react'
 
 class SearchGT extends Component {
@@ -89,7 +95,7 @@ class SearchGT extends Component {
   click1 = () => {
     fetch('/api/search/?q=' + this.state.url + '&sort=relative&page=' + this.state.page, {
       method: 'GET',
-      NB: 3
+      NB: 'bbb'
     })
       .then(response => {
         return response.json()
@@ -118,13 +124,7 @@ class SearchGT extends Component {
   }
 
   render () {
-    var nb = ''
     var gt = document.getElementsByClassName('href-a')
-    if (this.state.NB === 3) {
-      return <SearchWater3 dete={this.state.dete} />
-    } else if (this.state.NB === '') {
-      return <SearchWater data={this.state.data} />
-    }
     for (var i = 0; i < gt.length; i++) {
       gt[i].style.color = ''
       if (this.state.pb === '888') {
@@ -138,6 +138,56 @@ class SearchGT extends Component {
       } else if (this.state.pb === '88') {
         gt[1].style.color = 'red'
       }
+    }
+    var nb = ''
+    if (this.state.NB === 'bbb') {
+      return (
+        <div>
+          <div id='searchPage'>
+            <HeaderNav />
+            <HeaderAd />
+            <div id='searchBig' >
+              <input type='text' placeholder='搜索你喜欢的内容' className='searchtext' onChange={this.change} />
+              <a href={'search.html?q=' + this.state.value}><img className='pgo' src={SearchImg} /></a>
+              <div className='searchBox'>
+                <a href='#'><span className='span-a'>34757采集</span></a>
+                <a href='#'><span className='span-a'>7331画板</span></a>
+                <a href='#'><span className='span-a'>5404用户</span></a>
+                <a className='href-a'>排序:</a>
+                <a className='href-a' onClick={this.clickc}>综合</a>
+                <a className='href-a' onClick={this.click}>热门</a>
+                <a className='href-a' onClick={this.click1}>匹配度</a>
+                <a className='href-a' onClick={this.click2}>时间</a>
+              </div>
+            </div>
+          </div>
+          <SearchGT3 dete={this.state.dete} />
+        </div>
+      )
+    } else if (this.state.NB === '') {
+      return (
+        <div>
+          <div id='searchPage'>
+            <HeaderNav />
+            <HeaderAd />
+            <div id='searchBig' >
+              <input type='text' placeholder='搜索你喜欢的内容' className='searchtext' onChange={this.change} />
+              <a href={'search.html?q=' + this.state.value}><img className='pgo' src={SearchImg} /></a>
+              <div className='searchBox'>
+                <a href='#'><span className='span-a'>34757采集</span></a>
+                <a href='#'><span className='span-a'>7331画板</span></a>
+                <a href='#'><span className='span-a'>5404用户</span></a>
+                <a className='href-a'>排序:</a>
+                <a className='href-a' onClick={this.clickc}>综合</a>
+                <a className='href-a' onClick={this.click}>热门</a>
+                <a className='href-a' onClick={this.click1}>匹配度</a>
+                <a className='href-a' onClick={this.click2}>时间</a>
+              </div>
+            </div>
+          </div>
+          <SearchWater data={this.state.data} />
+        </div>
+      )
     }
     return (
       <div>
