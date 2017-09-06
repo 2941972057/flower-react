@@ -3,8 +3,8 @@
  */
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Favorite from './Favorite'
+import App from './App'
 ReactDOM.render(
-  <Favorite />,
+  <App />,
   document.getElementById('app')
 )

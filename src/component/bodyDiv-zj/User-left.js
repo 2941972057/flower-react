@@ -1,6 +1,9 @@
+/**
+ * Created by dllo on 17/9/4.
+ */
 import React, {Component} from 'react'
 import '../../assets/styles/index/BodyGt.styl'
-class Users extends Component {
+class UsersLeft extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -15,7 +18,7 @@ class Users extends Component {
   render () {
     return (
       <div className='flowLgt'>
-        <div className='bodyDiv-down'>
+        <div className='bodyDiv-down-left'>
           <p className='pantP'>人物</p>
           <a className='titlepdown'>{this.state.title1}</a>
           <br />
@@ -26,4 +29,4 @@ class Users extends Component {
     )
   }
 }
-export default Users
+export default UsersLeft

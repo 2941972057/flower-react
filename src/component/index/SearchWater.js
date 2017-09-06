@@ -1,20 +1,28 @@
 /**
+ * Created by dllo on 17/9/5.
+ */
+/**
  * Created by dllo on 17/8/25.
  */
-import React, {Component} from 'react'
 import '../../assets/styles/waterFall/WaterFall.styl'
-class WaterFall extends Component {
+// 头部导航组件
+// import HeaderNav from '../../component/common/headerNav/HeaderNav'
+// 头部广告组件
+// import HeaderAd from '../../component/common/headerAd/HeaderAd'
+// 头部大图片组件
+// import SearchImg from '../../assets/images/index/搜索.png'
+// import SearchGT3 from '../../component/index/SearchGT3'
+import React, {Component} from 'react'
+class SearchWater extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      arrList: [],
-      pinId: '',
-      boardId: ''
+      arrList: []
     }
   }
   componentWillReceiveProps (props) {
     let theProps = props
-    const arr = theProps.data
+    var arr = theProps.data
     for (const key in arr) {
       var username = ''
       if (arr[key].via_user) {
@@ -23,10 +31,6 @@ class WaterFall extends Component {
         username = '花瓣宝宝'
       }
       const list = {
-        Id: {
-          pinId: arr[key].pin_id,
-          boardId: arr[key].board.board_id
-        },
         bigImg: 'http://img.hb.aicdn.com/' + arr[key].file.key,
         bWidth: arr[key].file.width,
         bHeight: arr[key].file.height,
@@ -86,48 +90,42 @@ class WaterFall extends Component {
       }
     }
   }
-  click = () => {
-    document.getElementById('waterList').style.display = 'block'
-  }
   render () {
     return (
       <div id='new-waterFall'>
         <div id='water-ad1'>
-          <div id='ad-box'>
-            <div id='ad-box1'>广告位招租</div>
-            <div id='ad-box2'>一天一万, 包月九折!</div>
-          </div>
+          广告
         </div>
         <div>
           {
-              this.state.arrList.map((item, index) =>
-                <div className='water-list' key={index}>
-                  <div className='wf-list'>
-                    <div>
-                      <img src={item.bigImg} alt='' className='bigImg' style={{height: 236 * item.bHeight / item.bWidth}} />
-                      <div className='cover' ref='click' onClick={this.click} id={item.Id.pinId} title={item.Id.boardId} />
+            this.state.arrList.map((item, index) =>
+              <div className='water-list' key={index}>
+                <div className='wf-list' style={{height: 236 * item.bHeight / item.bWidth}}>
+                  <a href=''>
+                    <img src={item.bigImg} alt='' className='bigImg' />
+                    <div className='cover' />
+                  </a>
+                  <div className='collection'>采集</div>
+                  <div className='thumbs'>点赞</div>
+                </div>
+                <div className='water-text'>
+                  {
+                    item.title.length === 0
+                      ? <div />
+                      : <div className='water-title'>{item.title}</div>
+                  }
+                  <div className='water-desc'>
+                    <div className='water-author-image' style={{height: 34 * item.sHeight / item.sWidth}}>
+                      <img src={item.smallImg} alt='' />
                     </div>
-                    <div className='collection'>采集</div>
-                    <div className='thumbs'>点赞</div>
-                  </div>
-                  <div className='water-text'>
-                    {
-              item.title.length === 0
-                  ? <div />
-                  : <div className='water-title'>{item.title}</div>
-            }
-                    <div className='water-desc'>
-                      <div className='water-author-image'>
-                        <img src={item.smallImg} alt='' />
-                      </div>
-                      <div className='author-box'>
-                        <a href='#' className='author1'>{item.username1}</a>
-            采集到了
-            <a href='' className='author2'>{item.username2}</a>
-                      </div>
+                    <div className='author-box'>
+                      <a href='' className='author1'>{item.username1}</a>
+                      采集到了
+                      <a href='' className='author2'>{item.username2}</a>
                     </div>
                   </div>
                 </div>
+              </div>
             )
           }
         </div>
@@ -135,4 +133,4 @@ class WaterFall extends Component {
     )
   }
 }
-export default WaterFall
+export default SearchWater

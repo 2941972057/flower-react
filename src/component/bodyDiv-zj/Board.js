@@ -16,17 +16,14 @@ class Board extends Component {
     fetch('/api/?page=' + this.state.page, {
       method: 'GET'
     })
-            .then(response => {
-              return response.json()
-            })
-            .then(response => {
-              this.setState({
-                data: response
-              })
-            })
-  }
-  static propTypes = {
-    types: React.PropTypes.func
+      .then(response => {
+        return response.json()
+      })
+      .then(response => {
+        this.setState({
+          data: response
+        })
+      })
   }
   render () {
     const object = this.state.data.recommends
@@ -42,21 +39,20 @@ class Board extends Component {
         titleArr.push(title)
         var pin = object[key].pin_count
         pinAll.push(pin)
-        var gods = object[key].user.username
       }
     }
 
     return (
       <div className='flowLgt'>
         <div className='bodyDiv-top'>
-          <p className='pantT' name={this.state.page} onClick={this.props.types}>画板</p>
+          <p className='pantT'>画板</p>
           <a className='titlep'>{titleArr[0]}</a>
           <br />
           <span>{fansAll[0]}粉丝</span>
           <span>{pinAll[0]}采集</span>
           <br />
           <a className='as1'>来自</a>
-          <a className='as2'>{gods}</a>
+          <a className='as2'>gods</a>
         </div>
       </div>
     )

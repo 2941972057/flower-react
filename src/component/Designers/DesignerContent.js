@@ -3,7 +3,10 @@
  */
 import React, {Component} from 'react'
 import '../../assets/styles/miss/DesignerContent.styl'
-import Xing from '../../assets/images/miss/白星星1.png'
+import Xing from '../../assets/images/miss/白星星.png'
+import you from '../../assets/images/miss/8D905C1A-5E94-4B8D-B54F-8A6B6584DF70.png'
+import zuo from '../../assets/images/miss/86A495BF-7F9A-461A-9147-2FF3B74A1F6C.png'
+import ui from '../../assets/images/miss/DBE69879-98B4-4564-A6AC-A897E8FA2A1B.png'
 class DesignerContent extends Component {
   constructor (props) {
     super(props)
@@ -72,6 +75,26 @@ class DesignerContent extends Component {
         </div>
         <div className='wxj_Content_content'>
           {ImgArr}
+          <div className='wxj_content_bottom'>
+            <ul className='wxj_content_page'>
+              <a href=''><li style={{width: '64.58px', height: '40px'}}><img style={{marginTop: '10px'}} src={zuo} /></li></a>
+              <a ><li onClick={this.clickAll} style={{width: '48.91px', height: '40px'}}>1</li></a>
+              <a><li onClick={this.clickLgo} style={{width: '48.91px', height: '40px'}}>2</li></a>
+              <a><li onClick={this.clickLPlane} style={{width: '48.91px', height: '40px'}}>3</li></a>
+              <a><li onClick={this.clickLInset} style={{width: '48.91px', height: '40px'}}>4</li></a>
+              <a><li onClick={this.clickLProduct} style={{width: '48.91px', height: '40px'}}>5</li></a>
+              <a><li onClick={this.clickLFilm} style={{width: '48.91px', height: '40px'}}>6</li></a>
+              <a><li onClick={this.clickLPhotograph} style={{width: '48.91px', height: '40px'}}>7</li></a>
+              <a><li onClick={this.clickCloth} style={{width: '48.91px', height: '40px'}}>8</li></a>
+              <a><li onClick={this.clickIndoor} style={{width: '48.91px', height: '40px'}}>9</li></a>
+              <a><li onClick={this.clickModule} style={{width: '48.91px', height: '40px'}}>...</li></a>
+              <a><li onClick={this.clickVIP} style={{width: '57.8px', height: '40px'}}>99</li></a>
+              <a><li onClick={this.clickOther} style={{width: '66.7px', height: '40px'}}>100</li></a>
+              <a><li onClick={this.clickOther} style={{width: '64.58px', height: '40px'}}><img src={ui} style={{marginTop: '10px'}} /></li></a>
+              <a href=''><li onClick={this.clickOther} style={{width: '64.58px', height: '40px'}}><img style={{marginTop: '10px'}} src={you} /></li></a>
+            </ul>
+          </div>
+>>>>>>> 69c59b6f396b35bd12427a4aa7608ccbc89e1933
         </div>
       </div>
     )

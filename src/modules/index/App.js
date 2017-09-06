@@ -2,8 +2,8 @@
  * Created by dllo on 17/8/23.
  */
 import React, {Component} from 'react'
+import '../../assets/styles/new/Header.styl'
 import Nav from '../../component/common/headerNav/HeaderNav'
-import '../../assets/styles/common/headerNav/headerNav.styl'
 import NavGt from '../../component/index/flowernavgt'
 import '../../assets/styles/index/Navgt.styl'
 import AdvertGt from '../../component/index/advert'
@@ -11,10 +11,10 @@ import '../../assets/styles/index/advert.styl'
 import BodyGt from '../../component/index/BodyGt'
 import '../../assets/styles/index/BodyGt.styl'
 import LoodIng from '../../component/index/looding'
-import Allzj from '../../component/bodyDiv-zj/Allzj'
+// import Allzj from '../../component/bodyDiv-zj/Allzj'
 import '../../assets/styles/index/Looding.styl'
 import '../../assets/styles/index/App.styl'
-
+import FootGt from '../../component/index/FootGt'
 class App extends Component {
   constructor (props) {
     super(props)
@@ -37,6 +37,19 @@ class App extends Component {
           })
         })
   }
+  ClickAdd = () => {
+    fetch('/api/?page=2', {
+      method: 'GET'
+    })
+      .then(response => {
+        return response.json()
+      })
+      .then(response => {
+        this.setState({
+          data: response
+        })
+      })
+  }
 
   render () {
     const object = this.state.data.banners
@@ -51,6 +64,7 @@ class App extends Component {
     }
 
     return (
+
       <div className='wrap'>
         <Nav />
         <div id='myDiv'style={divStyle} >
@@ -58,8 +72,8 @@ class App extends Component {
         </div>
         <AdvertGt />
         <BodyGt />
-        <Allzj />
-        <LoodIng />
+        <LoodIng Click={this.ClickAdd} />
+        <FootGt />
       </div>
 
     )
