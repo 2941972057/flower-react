@@ -1,4 +1,7 @@
 /**
+ * Created by dllo on 17/9/6.
+ */
+/**
  * Created by dllo on 17/9/5.
  */
 /**
@@ -12,7 +15,7 @@ import '../../assets/styles/waterFall/WaterFall.styl'
 // 头部大图片组件
 // import SearchImg from '../../assets/images/index/搜索.png'
 import React, {Component} from 'react'
-class SearchGT3 extends Component {
+class SearchGT1 extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -21,8 +24,8 @@ class SearchGT3 extends Component {
   }
   componentWillReceiveProps (props) {
     let theProps = props
-    var arr = theProps.dete
-    console.log(props, 8888888)
+    var arr = theProps.data1
+    console.log(props, 777777)
     for (const key in arr) {
       var username = ''
       if (arr[key].via_user) {
@@ -94,43 +97,43 @@ class SearchGT3 extends Component {
     return (
       <div id='new-waterFall'>
         <div id='water-ad1'>
-            广告
-          </div>
+          广告
+        </div>
         <div>
           {
-              this.state.arrList.map((item, index) =>
-                <div className='water-list' key={index}>
-                  <div className='wf-list' style={{height: 236 * item.bHeight / item.bWidth}}>
-                    <a href=''>
-                      <img src={item.bigImg} alt='' className='bigImg' />
-                      <div className='cover' />
-                    </a>
-                    <div className='collection'>采集</div>
-                    <div className='thumbs'>点赞</div>
-                  </div>
-                  <div className='water-text'>
-                    {
-                      item.title.length === 0
-                        ? <div />
-                        : <div className='water-title'>{item.title}</div>
-                    }
-                    <div className='water-desc'>
-                      <div className='water-author-image' style={{height: 34 * item.sHeight / item.sWidth}}>
-                        <img src={item.smallImg} alt='' />
-                      </div>
-                      <div className='author-box'>
-                        <a href='' className='author1'>{item.username1}</a>
-                        采集到了
-                        <a href='' className='author2'>{item.username2}</a>
-                      </div>
+            this.state.arrList.map((item, index) =>
+              <div className='water-list' key={index}>
+                <div className='wf-list' style={{height: 236 * item.bHeight / item.bWidth}}>
+                  <a href=''>
+                    <img src={item.bigImg} alt='' className='bigImg' />
+                    <div className='cover' />
+                  </a>
+                  <div className='collection'>采集</div>
+                  <div className='thumbs'>点赞</div>
+                </div>
+                <div className='water-text'>
+                  {
+                    item.title.length === 0
+                      ? <div />
+                      : <div className='water-title'>{item.title}</div>
+                  }
+                  <div className='water-desc'>
+                    <div className='water-author-image' style={{height: 34 * item.sHeight / item.sWidth}}>
+                      <img src={item.smallImg} alt='' />
+                    </div>
+                    <div className='author-box'>
+                      <a href='' className='author1'>{item.username1}</a>
+                      采集到了
+                      <a href='' className='author2'>{item.username2}</a>
                     </div>
                   </div>
                 </div>
-              )
-            }
+              </div>
+            )
+          }
         </div>
       </div>
     )
   }
 }
-export default SearchGT3
+export default SearchGT1

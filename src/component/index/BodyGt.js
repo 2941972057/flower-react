@@ -8,7 +8,7 @@
  * Created by dllo on 17/8/25.
  */
 import React, {Component} from 'react'
-import Roardsone from '../bodyDiv-zj/Roardsone'
+import Roardsone from '../../component/bodyDiv-zj/Roardsone'
 import '../../assets/styles/index/BodyGt.styl'
 import SanImg from '../../assets/images/index/三角形.png'
 import SanzImg from '../../assets/images/index/三角形左.png'
