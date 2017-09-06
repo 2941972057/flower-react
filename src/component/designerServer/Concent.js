@@ -4,6 +4,10 @@
 import React, {Component} from 'react'
 import '../../assets/styles/miss/Content.styl'
 import Logo from '../../assets/images/miss/星.png'
+import you from '../../assets/images/miss/8D905C1A-5E94-4B8D-B54F-8A6B6584DF70.png'
+import zuo from '../../assets/images/miss/86A495BF-7F9A-461A-9147-2FF3B74A1F6C.png'
+import ui from '../../assets/images/miss/DBE69879-98B4-4564-A6AC-A897E8FA2A1B.png'
+
 const logoArr = ['子类:', '网页设计App', '设计移动网页/H5 页面设计', '活动页面设计', 'icon设计', 'banner 设计', '其它 UI 设计']
 const planeArr = ['子类:', '明信片', '海报/易拉宝', '宣传册/宣传单页产品', '包装封面设计', '其他平面设计']
 const UIArr = ['子类:', '网页设计App', '设计移动网页/H5', '页面设计', '活动页面设计', 'icon 设计', 'banner 设计', '其它 UI 设计']
@@ -400,6 +404,25 @@ class Content extends Component {
         <div className='wxj_content'>
           <div className='wxj_content_contain'>
             {arr}
+          </div>
+          <div className='wxj_content_bottom'>
+            <ul className='wxj_content_page'>
+              <a href=''><li style={{width: '64.58px', height: '40px'}}><img style={{marginTop: '10px'}} src={zuo} /></li></a>
+              <a ><li onClick={this.clickAll} style={{width: '48.91px', height: '40px'}}>1</li></a>
+              <a><li onClick={this.clickLgo} style={{width: '48.91px', height: '40px'}}>2</li></a>
+              <a><li onClick={this.clickLPlane} style={{width: '48.91px', height: '40px'}}>3</li></a>
+              <a><li onClick={this.clickLInset} style={{width: '48.91px', height: '40px'}}>4</li></a>
+              <a><li onClick={this.clickLProduct} style={{width: '48.91px', height: '40px'}}>5</li></a>
+              <a><li onClick={this.clickLFilm} style={{width: '48.91px', height: '40px'}}>6</li></a>
+              <a><li onClick={this.clickLPhotograph} style={{width: '48.91px', height: '40px'}}>7</li></a>
+              <a><li onClick={this.clickCloth} style={{width: '48.91px', height: '40px'}}>8</li></a>
+              <a><li onClick={this.clickIndoor} style={{width: '48.91px', height: '40px'}}>9</li></a>
+              <a><li onClick={this.clickModule} style={{width: '48.91px', height: '40px'}}>...</li></a>
+              <a><li onClick={this.clickVIP} style={{width: '57.8px', height: '40px'}}>99</li></a>
+              <a><li onClick={this.clickOther} style={{width: '66.7px', height: '40px'}}>100</li></a>
+              <a><li onClick={this.clickOther} style={{width: '64.58px', height: '40px'}}><img src={ui} style={{marginTop: '10px'}} /></li></a>
+              <a href=''><li onClick={this.clickOther} style={{width: '64.58px', height: '40px'}}><img style={{marginTop: '10px'}} src={you} /></li></a>
+            </ul>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
-import ServerTop from '../../component/designerServer/ServerTop'
 import Bottom from '../../component/miss/Bottom'
-import Production from '../../component/DesignerLinan/Production'
+import ServerTop from '../../component/designerServer/ServerTop'
+import Content from '../../component/designerServer/Concent'
 
 class DesignerServer extends Component {
   constructor (props) {
@@ -14,7 +14,7 @@ class DesignerServer extends Component {
     return (
       <div>
         <ServerTop />
-        <Production />
+        <Content />
         <Bottom />
       </div>
     )
