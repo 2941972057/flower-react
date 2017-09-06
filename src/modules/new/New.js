@@ -2,7 +2,7 @@
  * Created by dllo on 17/8/23.
  */
 import React, {Component} from 'react'
-// 头部样式
+// 通用样式
 import '../../assets/styles/new/Header.styl'
 // 头部导航组件
 import HeaderNav from '../../component/common/headerNav/HeaderNav'
@@ -17,12 +17,15 @@ import CategoryGuide from '../../component/new/Category_guide'
 import CategoryImg from '../../component/new/Category_img'
 // 内容区瀑布流组件
 import WaterFall from '../../component/waterFall/WaterFall'
-class App extends Component {
+import WaterList from '../../component/waterList/WaterList'
+class New extends Component {
   constructor (props) {
     super(props)
     this.state = {
       data: [],
-      page: 1
+      page: 1,
+      pinId: '',
+      boardId: ''
     }
   }
   componentDidMount () {
@@ -64,7 +67,6 @@ class App extends Component {
             })
           })
   }
-
   render () {
     return (
       <div>
@@ -75,8 +77,9 @@ class App extends Component {
         <CategoryGuide />
         <CategoryImg />
         <WaterFall data={this.state.data} />
+        <WaterList />
       </div>
     )
   }
 }
-export default App
+export default New

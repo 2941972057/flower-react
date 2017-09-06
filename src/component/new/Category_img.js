@@ -13,22 +13,22 @@ class CategoryImg extends Component {
   render () {
     return (
       <div id='new-category-img'>
-        <a href='' className='category-image'>
+        <a href='#' className='category-image'>
           <img src={Img1} alt='' />
         </a>
-        <a href='' className='category-image'>
+        <a href='#' className='category-image'>
           <img src={Img2} alt='' />
         </a>
-        <a href='' className='category-image'>
+        <a href='#' className='category-image'>
           <img src={Img3} alt='' />
         </a>
-        <a href='' className='category-image'>
+        <a href='#' className='category-image'>
           <img src={Img4} alt='' />
         </a>
-        <a href='' className='category-image'>
+        <a href='#' className='category-image'>
           <img src={Img5} alt='' />
         </a>
-        <a href='' className='category-image'>
+        <a href='#' className='category-image'>
           <img src={Img6} alt='' />
         </a>
       </div>

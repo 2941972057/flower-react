@@ -114,7 +114,7 @@ class Start extends Component {
           <ul>{dataArr}</ul>
         </div>
         {/* 分页 */}
-        <div className='w-switch'>
+        <div className='why-switch'>
           <a className='w-switch-a' onClick={this.click} >1</a>
           <a className='w-switch-a' onClick={this.click1} >2</a>
           <a className='w-switch-a' href=''>»</a>

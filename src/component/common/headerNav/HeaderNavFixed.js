@@ -4,7 +4,12 @@
 import React, {Component} from 'react'
 import Page from '../../../component/more/PagePilot'
 import '../../../assets/styles/common/headerNav/headerNavFixed.styl'
+import Zc from '../../loginRegistration/LoginRegister'
 class HeaderNavFixed extends Component {
+  click = () => {
+    var x = document.getElementById('w-overlay')
+    x.style.display = 'block'
+  }
   render () {
     return (
       <div id='header-nav'>
@@ -23,8 +28,9 @@ class HeaderNavFixed extends Component {
             </span>
           </div>
           <div id='nav-right'>
-            <button id='register'>注册</button>
+            <button id='register' onClick={this.click}>注册</button>
             <button id='login'>登录</button>
+            <Zc />
           </div>
         </div>
       </div>

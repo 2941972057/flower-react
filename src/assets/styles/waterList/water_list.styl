@@ -1,0 +1,402 @@
+#waterList
+  position fixed
+  top 0
+  left 0
+  width 100%
+  background-color rgba(229,229,229,.95)
+  height 1000px
+  z-index 99
+  padding-top 46px
+  overflow auto
+  display none
+#waterList-deleteBox
+  position fixed
+  top 0
+  right 0
+  width 56px
+  padding 10px 0
+#waterList-delete
+  margin auto
+  width 36px
+  height 36px
+  background url("http://huaban.com/img/btn_close_layer.png") 0 0 no-repeat
+// 顶部
+.waterListTopBox
+  width 1014px
+  margin auto
+.waterListTopBox:after
+  content ''
+  display block
+  clear both
+.waterListTop
+  width 698px
+  float left
+.waterListTop:after
+  content ''
+  display block
+  clear both
+.waterListTop-left
+  margin-bottom 16px
+  box-sizing border-box
+  width 698px
+  float left
+  box-shadow 0 1px 3px rgba(34,25,25,.4)
+  background-color white
+.waterList-des
+  background-color white
+  float left
+.waterListTop-right
+  width 300px
+  box-sizing border-box
+  padding 16px 20px
+  box-shadow 0 1px 3px rgba(34,25,25,.4)
+  float right
+  background-color white
+.shareList
+  margin-bottom 16px
+  padding 16px 20px 0
+.shareList:after,.shareList-right:after
+  content ''
+  display block
+  clear both
+.shareList-left
+  float left
+.share1,.share2
+  width 54px
+  height 30px
+  margin-right 10px
+  border-radius 2px
+  outline none
+  border 1px solid rgba(0,0,0,.2)
+.share1
+  background-color #E53E49
+  color #fff
+.share2
+  background-color #fff
+.share1:hover
+  background-color linear-gradient( #F45D68, #E54646)
+  border 1px solid #C90000
+.share2:hover
+  background-color linear-gradient(#FFF, #F7F7F7)
+  border 1px solid #CCC
+.shareList-right
+  float right
+.shareList-right>div
+  float left
+.share-title
+  height 30px
+  line-height 30px
+.share-list
+  height 28px
+  margin-left 10px
+  margin-right 20px
+  border 1px solid #EDEDED
+.share-list>a
+  display inline-block
+  width 29px
+  border-right 1px solid #EDEDED
+  height 28px
+.share-list>div
+  display inline-block
+  width 30px
+  height 28px
+.share-moreBig
+  width 32px
+  height 28px
+  border 1px solid #EDEDED
+.share-list>a:nth-child(1)
+  background url("http://huaban.com/img/pin_view/share_icon.svg") 6px 4px no-repeat
+.share-list>a:nth-child(2)
+  background url("http://huaban.com/img/pin_view/share_icon.svg") 6px 4px no-repeat
+  background-position 6px -36px
+.share-list>a:nth-child(3)
+  background url("http://huaban.com/img/pin_view/share_icon.svg") 6px 4px no-repeat
+  background-position 6px -276px
+.share-list>div
+  background url("http://huaban.com/img/pin_view/share_icon.svg") -101px 9px no-repeat
+.share-big
+  display block
+  width 32px
+  height 28px
+  background url("http://huaban.com/img/pin_view/zoom_in.svg") 6px 4px no-repeat
+// 大图片
+.waterList-bigImg
+  width 658px
+  padding 0 20px
+.waterList-bigImg>a
+  display block
+  width 658px
+.waterList-img
+  display block
+  margin auto
+
+.tool-bottom
+  margin-top 16px
+  padding-bottom 20px
+.tool-bottom:after
+  content ''
+  display block
+  clear both
+.tool-bottomLeft
+  float left
+.tool-bottomRight
+  float right
+.repin-btn,.like-btn,.comment-btn
+  margin-right 10px
+  padding 0 10px
+  height 28px
+  outline none
+  border 1px solid #EDEDED
+  background-color #FAFAFA
+.repin-btn:hover,.like-btn:hover,.comment-btn:hover,.report-a:hover,.source-a:hover
+  background-color: #FFF
+  border-color: #DDD
+.repin-i,.like-i,.comment-i
+  display inline-block
+  width 12px
+  height 12px
+  margin-right 2px
+  position relative
+  top 2px
+.repin-i
+  background url("http://huaban.com/img/bt_action_icons.svg") -30px 0 no-repeat
+.like-i
+  background url("http://huaban.com/img/bt_action_icons.svg") 0 0 no-repeat
+.comment-i
+  background url("http://huaban.com/img/bt_action_icons.svg") -60px 0 no-repeat
+.report-a,.source-a
+  height 28px
+  padding 4px 10px
+  background-color #FAFAFA
+  border 1px solid #EDEDED
+.report-a
+  margin-right 10px
+.source-a
+  text-decoration none
+  color black
+  line-height 30px
+.report-i
+  display inline-block
+  width 16px
+  height 16px
+  position relative
+  top 3px
+  background url("http://huaban.com/img/report_icon.svg") 0 -20px no-repeat
+.source-i
+  display inline-block
+  width 12px
+  height 12px
+  position relative
+  top: 2px
+  margin-right 4px
+  background url("http://huaban.com/img/pin_view/website.svg") 0 0 no-repeat
+
+// 采集信息
+.piece
+  padding 16px 16px 0 16px
+.info
+  height 50px
+.info:after
+  content ''
+  display block
+  clear both
+.avt
+  float left
+  width 50px
+  height 50px
+  margin-right 10px
+.avt-box
+  float left
+.avt>img
+  width 50px
+.avt-author>span
+  padding 0 5px
+  font-size 20px
+  color #8c7e7e
+.avt-author>a
+  font-size 20px
+  text-decoration none
+  color black
+.ava-timeBox
+  color #999
+.ava-time
+  color #999
+  padding 0 5px
+.dec
+  background-color #FAFAFA
+  padding 15px
+  word-wrap: break-word
+  margin-bottom 20px
+.add-comment
+  border-top  1px solid #EDEDED
+  padding 10px 20px 16px
+.add-comment:after
+  content ''
+  display block
+  clear both
+.avatar
+  float left
+  width 50px
+  height 50px
+  margin-right 10px
+.avatar>img
+  width 50px
+.add-text
+  float left
+.add-text>form
+  margin-bottom 10px
+.add-text textarea
+  width 576px
+  height 39px
+  padding 5px 10px
+  outline none
+  font-size 16px
+  border 1px solid #EDEDED
+  color #777
+.add-post
+  text-align right
+.add-post>a
+  display inline-block
+  color #444
+  height 28px
+  border 1px solid #EDEDED
+  background-color #fff
+  text-decoration none
+  padding 0 12px
+  line-height 28px
+.waterList-fall
+  margin-bottom 10px
+.waterList-fall:after
+  content ''
+  display block
+  clear both
+.avt1
+  float left
+  margin-right 6px
+  width 38px
+  height 38px
+.avt1>img
+  width 38px
+.avt2
+  float left
+.avt1-author1>a
+  font-size 15px
+  text-decoration none
+  overflow: hidden
+  text-overflow: ellipsis
+  color #222
+.avt1-author2
+  color #999
+  font-size 13px
+.waterList-ad
+  height 378px
+  border 1px solid red
+.waterList-tit>button
+  width 260px
+  padding 5px 0
+  margin-top 10px
+  outline none
+  background-color #fff
+  border 1px solid #CCC
+.waterList-tit>button:hover
+  background: linear-gradient(#FFF, #F7F7F7);
+  box-shadow: inset 0 1px 0 white, 0 1px 0 rgba(255,255,255,.05)
+
+// WaterListMian
+.waterList-main
+  width 1014px
+  margin 20px auto
+.title-el
+  font-size 20px
+  color #777
+  padding 20px 0 10px 0
+  margin-bottom 20px
+  border-bottom 1px solid #ccc
+.load-moreBox
+  font-size 18px
+  border-radius 3px
+.load-more
+  width 100%
+  font-size 18px
+  padding 5px 0
+  outline none
+  background-color rgb(245,245,245)
+  border 1px solid #D9D9D9
+.load-more:hover
+  color: #444;
+  background: linear-gradient(#FFF, #F7F7F7)
+  box-shadow: inset 0 1px 0 white, 0 1px 0 rgba(255,255,255,.05)
+  border: 1px solid #CCC
+.board-box
+  margin-bottom 20px
+.board-box:after
+  content: ''
+  display block
+  clear both
+.board
+  border 1px solid red
+  padding 10px 10px 16px 10px
+  width 214px
+  float left
+  position relative
+  margin-right 23px
+.board-box .board:last-child
+  margin-right 0
+.board-link
+  width 216px
+  height 289px
+  position relative
+.link
+  display inline-block
+  width 216px
+  height 216px
+  margin-bottom 3px
+.link1
+  display inline-block
+  width 70px
+  height 70px
+  margin-right 3px
+.board-link>.link1:nth-child(4)
+  margin 0
+.cover
+  position absolute
+  top 0
+  left 0
+  width 216px
+  height 289px
+.board-downBox
+  margin-top 10px
+.board-downBox:after
+  content ''
+  display block
+  clear both
+.board-authorBox
+  float left
+.board-authorImg
+  display inline-block
+  width 24px
+  height 24px
+  margin-right 10px
+.board-author
+  position relative
+  top 3px
+  color black
+  text-decoration none
+.board-followBox
+  float right
+.board-follow
+  padding 4px 10px
+.board h3
+  color #fff
+  position absolute
+  top 20px
+  left 20px
+.pin-count
+  background-color rgba(0,0,0,.4)
+  padding 0 5px
+  font-size 12px
+  color #fff
+  border-radius 2px
+  position absolute
+  top 200px
+  left 20px

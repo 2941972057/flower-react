@@ -1,13 +1,43 @@
 /**
  * Created by dllo on 17/8/25.
  */
-import '../../assets/styles/waterFall/WaterFall.styl'
 import React, {Component} from 'react'
+import '../../assets/styles/waterFall/WaterFall.styl'
 class WaterFall extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      arrList: []
+      arrList: [],
+      pinId: '',
+      boardId: ''
+    }
+  }
+  componentWillReceiveProps (props) {
+    let theProps = props
+    const arr = theProps.data
+    for (const key in arr) {
+      var username = ''
+      if (arr[key].via_user) {
+        username = arr[key].via_user.username
+      } else {
+        username = '花瓣宝宝'
+      }
+      const list = {
+        Id: {
+          pinId: arr[key].pin_id,
+          boardId: arr[key].board.board_id
+        },
+        bigImg: 'http://img.hb.aicdn.com/' + arr[key].file.key,
+        bWidth: arr[key].file.width,
+        bHeight: arr[key].file.height,
+        smallImg: 'http://img.hb.aicdn.com/' + arr[key].user.avatar.key,
+        sWidth: arr[key].user.avatar.width,
+        sHeight: arr[key].user.avatar.height,
+        title: arr[key].raw_text,
+        username1: arr[key].user.username,
+        username2: username
+      }
+      this.state.arrList.push(list)
     }
   }
   componentDidUpdate () {
@@ -56,43 +86,27 @@ class WaterFall extends Component {
       }
     }
   }
+  click = () => {
+    document.getElementById('waterList').style.display = 'block'
+  }
   render () {
-    let theProps = this.props
-    const arr = theProps.data
-    for (const key in arr) {
-      var username = ''
-      if (arr[key].via_user) {
-        username = arr[key].via_user.username
-      } else {
-        username = '花瓣宝宝'
-      }
-      const list = {
-        bigImg: 'http://img.hb.aicdn.com/' + arr[key].file.key,
-        bWidth: arr[key].file.width,
-        bHeight: arr[key].file.height,
-        smallImg: 'http://img.hb.aicdn.com/' + arr[key].user.avatar.key,
-        sWidth: arr[key].user.avatar.width,
-        sHeight: arr[key].user.avatar.height,
-        title: arr[key].raw_text,
-        username1: arr[key].user.username,
-        username2: username
-      }
-      this.state.arrList.push(list)
-    }
     return (
       <div id='new-waterFall'>
         <div id='water-ad1'>
-          广告
+          <div id='ad-box'>
+            <div id='ad-box1'>广告位招租</div>
+            <div id='ad-box2'>一天一万, 包月九折!</div>
+          </div>
         </div>
         <div>
           {
               this.state.arrList.map((item, index) =>
                 <div className='water-list' key={index}>
-                  <div className='wf-list' style={{height: 236 * item.bHeight / item.bWidth}}>
-                    <a href=''>
-                      <img src={item.bigImg} alt='' className='bigImg' />
-                      <div className='cover' />
-                    </a>
+                  <div className='wf-list'>
+                    <div>
+                      <img src={item.bigImg} alt='' className='bigImg' style={{height: 236 * item.bHeight / item.bWidth}} />
+                      <div className='cover' ref='click' onClick={this.click} id={item.Id.pinId} title={item.Id.boardId} />
+                    </div>
                     <div className='collection'>采集</div>
                     <div className='thumbs'>点赞</div>
                   </div>
@@ -103,11 +117,11 @@ class WaterFall extends Component {
                   : <div className='water-title'>{item.title}</div>
             }
                     <div className='water-desc'>
-                      <div className='water-author-image' style={{height: 34 * item.sHeight / item.sWidth}}>
+                      <div className='water-author-image'>
                         <img src={item.smallImg} alt='' />
                       </div>
                       <div className='author-box'>
-                        <a href='' className='author1'>{item.username1}</a>
+                        <a href='#' className='author1'>{item.username1}</a>
             采集到了
             <a href='' className='author2'>{item.username2}</a>
                       </div>

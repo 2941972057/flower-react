@@ -11,7 +11,7 @@ class Explores extends Component {
     super(props)
     this.state = {
       data: [],
-      page: 1
+      page: 2
     }
   }
 
@@ -35,18 +35,17 @@ class Explores extends Component {
 
     for (const key in object) {
       if (object[key].type === 'explores') {
-        console.log(object[key].type)
-
+        // console.log(object[key].type)
         var title = object[key].title
         titleArr.push(title)
       }
     }
 
     return (
-      <div className='flowLgt'><a />
+      <div className='flowLgt'>
         <div className='rlDiv'>
           <p className='pantT'>兴趣</p>
-          <a className='titlep'>{titleArr[2]}</a>
+          <a className='titlep'>{titleArr[0]}</a>
         </div>
       </div>
     )

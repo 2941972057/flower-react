@@ -11,9 +11,12 @@ class LoodIng extends Component {
       page: 2
     }
   }
+  static propTypes = {
+    Click: React.PropTypes.func
+  }
   render () {
     return (
-      <div className='FenG'>
+      <div className='FenG' onClick={this.props.Click}>
           加载更多
       </div>
     )

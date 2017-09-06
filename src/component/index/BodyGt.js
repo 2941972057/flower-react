@@ -8,7 +8,7 @@
  * Created by dllo on 17/8/25.
  */
 import React, {Component} from 'react'
-import Roardsone from '../../component/bodyDiv-zj/Roardsone'
+import Roardsone from '../bodyDiv-zj/Roardsone'
 import '../../assets/styles/index/BodyGt.styl'
 import SanImg from '../../assets/images/index/三角形.png'
 import SanzImg from '../../assets/images/index/三角形左.png'
@@ -66,22 +66,10 @@ class BodyGt extends Component {
         titleArr.push(titleE)
         imgArr2.push(e)
       }
-      // var gods = object[0].user.username
-      // var gods = object[0].user.username
-      // var sister = object[4].user.username
-
-      // var fans = object[key].follow_count
-      // fansAll.push(fans)
-      // var title = object[key].title
-      // titleArr.push(title)
-      // var pin = object[key].pin_count
-      // pinAll.push(pin)
-
       // var personDiv = {
       //   backgroundImage: 'url(' + imgArr2[1] + ')'
       // }
     }
-
     return (
       <div id='bodyDiv'>
 

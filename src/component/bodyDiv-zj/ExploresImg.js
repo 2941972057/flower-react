@@ -8,38 +8,19 @@ class ExploresImg extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      data: [],
-      page: 1
+      explores: ''
     }
   }
-
-  componentDidMount () {
-    fetch('/api/?page=' + this.state.page, {
-      method: 'GET'
-    })
-      .then(response => {
-        return response.json()
-      })
-      .then(response => {
-        this.setState({
-          data: response
-        })
-      })
+  componentWillReceiveProps (props) {
+    console.log(props, 10101010)
+    for (var key in props) {
+      this.state.explores = props[key]
+    }
   }
-
   render () {
-    const object = this.state.data.recommends
-    const imgArr2 = []
-    for (const key in object) {
-      if (object[key].type === 'explores') {
-        const c = 'http://' + object[key].cover.bucket + '.b0.upaiyun.com/' + object[key].cover.key
-        imgArr2.push(c)
-      }
-    }
-
     return (
       <div className='flowLgt'>
-        <a><img className='LaiImg' src={imgArr2[1]} /></a>
+        <a><img className='LaiImg' src={this.state.explores} /></a>
       </div>
     )
   }
